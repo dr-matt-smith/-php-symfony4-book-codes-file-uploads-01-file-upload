@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+{% if fileName is defined %}
+<p>
+    (current file details: {{ fileName }})
+</p>
+{% endif %}
+
+    <button class="btn">{{ button_label|default('Update') }}</button>
+{{ form_end(form) }}
